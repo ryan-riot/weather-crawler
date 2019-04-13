@@ -1,6 +1,7 @@
 package org.cnu.realcoding.weathercrawler.service;
 
 import org.cnu.realcoding.weathercrawler.domain.Dog;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
@@ -10,7 +11,12 @@ import static org.junit.Assert.*;
 
 public class DogServiceTest {
 
-    private DogService dogService = new DogService();
+    private DogService dogService;
+
+    @Before
+    public void setUp(){
+        dogService = new DogService();
+    }
 
     @Test
     public void testInsertDog(){
